@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import EventForm from './components/eventsForm';
+const EventForm = React.lazy(() => import('./components/eventsForm'));
 const EventsListing = React.lazy(() => import('./components/eventsListing'));
 
 function App() {
