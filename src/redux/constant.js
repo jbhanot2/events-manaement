@@ -1,0 +1,2 @@
+export const ACTION_FORM = 'EVENT_FORM';
+export const FETCH_COMPLETE = 'FETCH_COMPLETE';
