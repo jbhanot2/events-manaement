@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import EventForm from './components/eventsForm';
-import EventsListing from './components/eventsListing';
+const EventsListing = React.lazy(() => import('./components/eventsListing'));
 
 function App() {
   return (
     <div className="App container">
-        <h1 className="title">Event Management app</h1>
-        <EventForm/>
-        <EventsListing/>
+        <Suspense fallback={<div>Loading...</div>}>
+            <h1 className="title">Event Management app</h1>
+            <EventForm/>      
+            <EventsListing/>
+        </Suspense>
       </div>
   );
 }

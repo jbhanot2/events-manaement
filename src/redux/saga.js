@@ -4,7 +4,7 @@ import * as constant from './constant';
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
 function* fetchEvents(action) {
-    yield delay(2000);
+    yield delay(1200);
     yield put({type: constant.FETCH_COMPLETE, payload: action.payload})
 }
 
